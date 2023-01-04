@@ -1,0 +1,25 @@
+placeholder-dictionary:
+  platform:
+    unknown: "Unknown"
+    java: "Java"
+    google: "Android"
+    ios: "iPhone"
+    OSX: "Mac"
+    amazon: "Amazon"
+    gearvr: "GearVR"
+    hololens: "Hololens"
+    uwp: "Windows 10"
+    win32: "Windows"
+    dedicated: "Dedicated"
+    tvos: "AppleTV"
+    ps4: "PS4"
+    nx: "Switch"
+    xbox: "Xbox"
+    windows_phone: "Windows Phone"
+
+  input-mode:
+    unknown: "unknown"
+    keyboard_mouse: "Keyboard&Mouse"
+    touch: "Touchscreen"
+    controller: "Controller"
+    vr: "VR"

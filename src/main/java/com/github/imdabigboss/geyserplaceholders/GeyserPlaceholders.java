@@ -7,11 +7,20 @@ public class GeyserPlaceholders extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        if (Bukkit.getPluginManager().getPlugin("Geyser-Spigot") != null && Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
-            new Placeholder(this).register();
-        } else {
-            this.getLogger().warning("Geyser-Spigot or PlaceholderAPI not found! Disabling plugin.");
-            this.getServer().getPluginManager().disablePlugin(this);
+        if (Bukkit.getPluginManager().getPlugin("Geyser-Spigot") == null) {
+            getLogger().warning("Geyser not installed. Disabling plugin");
+            Bukkit.getPluginManager().disablePlugin(this);
+            return;
         }
+
+        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") == null) {
+            getLogger().warning("PlaceholderAPI not installed. Disabling plugin");
+            Bukkit.getPluginManager().disablePlugin(this);
+            return;
+        }
+
+        saveDefaultConfig();
+
+        new Placeholder(this).register();
     }
 }

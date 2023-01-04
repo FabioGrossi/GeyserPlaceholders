@@ -1,6 +1,6 @@
 name: GeyserPlaceholders
 version: ${project.version}
 main: com.github.imdabigboss.geyserplaceholders.GeyserPlaceholders
-api-version: 1.15
+api-version: 1.19
 softdepend: [Geyser-Spigot, PlaceholderAPI]
-authors: [ImDaBigBoss]
+authors: [ImDaBigBossm, _FabioTNT]
