@@ -77,16 +77,24 @@ public class Placeholder extends PlaceholderExpansion {
             return "";
         }
 
-        return switch (identifier) {
-            case "java_version" -> getJavaVersion();
-            case "bedrock_version" -> getBedrockVersion();
-            case "version" -> GeyserImpl.VERSION;
-            case "git_version" -> GeyserImpl.GIT_VERSION;
-            case "platform" -> getPlayerPlatform(player);
-            case "game_version" -> getPlayerGameVersion(player);
-            case "input_mode" -> getPlayerInputMode(player);
-            default -> null;
-        };
+        switch (identifier) {
+            case "java_version":
+                return getJavaVersion();
+            case "bedrock_version":
+                return getBedrockVersion();
+            case "version":
+                return GeyserImpl.VERSION;
+            case "git_version":
+                return GeyserImpl.GIT_VERSION;
+            case "platform":
+                return getPlayerPlatform(player);
+            case "game_version":
+                return getPlayerGameVersion(player);
+            case "input_mode":
+                return getPlayerInputMode(player);
+            default:
+                return null;
+        }
 
     }
 

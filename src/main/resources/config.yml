@@ -23,3 +23,5 @@ placeholder-dictionary:
     touch: "Touchscreen"
     controller: "Controller"
     vr: "VR"
+
+disable_metrics: false
